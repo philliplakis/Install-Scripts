@@ -4,7 +4,6 @@
 cd /etc/modprobe.d/
 
 cat > zfs.conf <<EOF
-#!/bin/sh
 options zfs zfs_arc_max=34359738368 
 EOF
 
