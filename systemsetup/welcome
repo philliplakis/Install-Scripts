@@ -1,0 +1,21 @@
+############################################################################
+
+        WELCOME TO RENDSOLVE
+
+        Please change your password with the following command:
+        # passwd
+        
+        Start VNC server with:
+        # /opt/TurboVNC/bin/vncserver
+        # /opt/noVNC/utils/launch.sh --vnc localhost:5901 --cert /etc/ssl/self.pem
+        
+        If this is your first Rendsolve Node visit this link for help
+        https://blog.rendsolve.com/getting-started/
+        
+        Some Helpful Links are here:
+        https://rendsolve.zendesk.com
+        https://status.rendsolve.com
+
+        HAVE FUN!!!
+
+############################################################################
