@@ -33,7 +33,12 @@ git clone https://github.com/philliplakis/nvsmi.git
 cd nvsmi
 npm install
 npm install forever -g
-forever start server.js
+
+cd /etc/init.d/
+touch nvsmi.sh
+echo "forever start /etc/nvsmi/server.js" >> ./nvsmi.sh
+chmod 755 /etc/init.d/nvsmi.sh 
+update-rc.d nvsmi.sh defaults
 
 echo "********************************************************************************"
 echo "Setup welcome message"
