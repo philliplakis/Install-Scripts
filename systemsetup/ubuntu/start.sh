@@ -2,12 +2,13 @@
 # Ubuntu Minimal 16.04
 
 echo "********************************************************************************"
-echo "UPDATE + QEMU"
+echo "UPDATE + QEMU + DNS Resolve"
 echo "********************************************************************************"
 sleep 2
 
 apt-get update
 apt-get install qemu-guest-agent
+echo 'echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null' >> ~/.bashrc
 
 echo "********************************************************************************"
 echo "NVIDIA / VNC"
