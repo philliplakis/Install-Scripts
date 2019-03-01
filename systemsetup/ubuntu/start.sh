@@ -45,7 +45,7 @@ cd nvsmi
 npm install
 npm install forever -g
 
-echo 'forever start /etc/nvsmi/server.js' >> ~/.bashrc
+echo 'forever start --minUptime 100 --spinSleepTime 100 /etc/nvsmi/server.js' >> ~/.bashrc
 
 echo "********************************************************************************"
 echo "Setup welcome message"
