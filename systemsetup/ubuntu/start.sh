@@ -17,10 +17,14 @@ sleep 2
 apt-get install cloud-init -y
 
 echo "********************************************************************************"
-echo "Installing NodeJS."
+echo "Installing NodeJS + NPM."
 echo "********************************************************************************"
 sleep 2
 
+apt-get install nodejs -y
+sudo apt install npm -y
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
 apt-get install nodejs -y
 
 echo "********************************************************************************"
@@ -34,11 +38,7 @@ cd nvsmi
 npm install
 npm install forever -g
 
-cd /etc/init.d/
-touch nvsmi.sh
-echo "forever start /etc/nvsmi/server.js" >> ./nvsmi.sh
-chmod 755 /etc/init.d/nvsmi.sh 
-update-rc.d nvsmi.sh defaults
+echo 'forever start /etc/nvsmi/server.js' >> ~/.bashrc
 
 echo "********************************************************************************"
 echo "Setup welcome message"
